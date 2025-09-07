@@ -1,0 +1,19 @@
+body {
+    background: #111;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao {
+    background-color: #363434;
+    border-radius: 20px;
+    padding: 40px 40px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
