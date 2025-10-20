@@ -1,0 +1,95 @@
+:root{
+    --bg-1: #071026;
+    --bg-2: #0b1220;
+    --accent: #7c3aed; /* roxo */
+    --muted: #94a3b8;
+    --card: #081025;
+    --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: radial-gradient(1000px 600px at 10% 10%, rgba(124,58,237,0.08), transparent 15%),
+                radial-gradient(800px 500px at 90% 90%, rgba(59,130,246,0.04), transparent 15%),
+                linear-gradient(180deg,var(--bg-1),var(--bg-2));
+    color:#e6eef8;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    padding:28px;
+}
+
+h1{
+    margin:0;
+    font-size:1.6rem;
+    font-weight:600;
+    color:var(--accent);
+    text-align:center;
+    text-shadow:0 6px 24px rgba(124,58,237,0.14);
+}
+
+#mensagem{
+    min-height:1.6rem;
+    margin:0;
+    padding:14px 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    color:#e6eef8;
+    font-weight:600;
+    width:360px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.03);
+}
+
+input#refeicaoInput{
+    width:360px;
+    padding:12px 14px;
+    border-radius:12px;
+    border:1px solid rgba(124,58,237,0.18);
+    background: linear-gradient(180deg, rgba(124,58,237,0.12), rgba(124,58,237,0.08));
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(124,58,237,0.06), inset 0 1px 0 rgba(255,255,255,0.02);
+    outline:none;
+    font-size:1rem;
+    transition:box-shadow .15s ease, border-color .15s ease, transform .06s ease;
+}
+
+input#refeicaoInput::placeholder{
+    color:rgba(255,255,255,0.65);
+}
+
+input#refeicaoInput:focus{
+    border-color:var(--accent);
+    box-shadow:0 16px 40px rgba(124,58,237,0.18);
+    transform:translateY(-1px);
+}
+
+/* small screen adjustment */
+@media (max-width:420px){
+    #mensagem, input#refeicaoInput{width:100%}
+}
+
+/* utility for screen-reader-only label */
+.sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+}
